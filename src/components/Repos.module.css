@@ -6,6 +6,8 @@ body {
   background-color: #1c1e2e; /* Fundo mais escuro */
   color: #ffffff; /* Texto branco */
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
 }
 
 /* Cabeçalhos */
@@ -29,7 +31,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 30rem;
+  width: 100%;
+  max-width: 30rem;
   height: auto; /* Altura dinâmica */
 }
 
@@ -45,7 +48,8 @@ body {
   flex-direction: column;
   gap: 1rem;
   border-radius: 10px;
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
 }
 
 /* Texto e linguagem */
@@ -135,9 +139,86 @@ body {
   padding: 0.4rem 0.2rem;
   font-size: 2rem;
 }
+
 .stats {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .div1 {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .divp {
+    width: 100%;
+  }
+
+  .nome {
+    font-size: 1rem;
+  }
+
+  .repo_btn {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .back_btn {
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .no_repos {
+    font-size: 1rem;
+  }
+
+  .stats svg {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .div1 {
+    padding: 0.5rem;
+  }
+
+  .divp {
+    padding: 0.5rem;
+  }
+
+  .nome {
+    font-size: 0.9rem;
+  }
+
+  .repo_btn {
+    width: 100px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .back_btn {
+    top: 0.3rem;
+    left: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .no_repos {
+    font-size: 0.9rem;
+  }
+
+  .stats svg {
+    font-size: 1.2rem;
+  }
 }
